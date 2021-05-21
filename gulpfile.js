@@ -13,18 +13,18 @@ function styles(done) {
         outputStyle: 'expanded'
       }).on('error', sass.logError)
     )
-    .pipe(gulp.dest('./srv/css'));
+    .pipe(gulp.dest('./build/css'));
     done()
 };
 
 function js(done){
-  gulp.src(['./src/js/*.js']).pipe(gulp.dest('./srv/js/'));
-  gulp.src('./node_modules/es6-scroll-to/lib/index.js').pipe(rename('es6-scroll-to.js')).pipe(gulp.dest('./srv/js/'));
+  gulp.src(['./src/js/*.js']).pipe(gulp.dest('./build/js/'));
+  gulp.src('./node_modules/es6-scroll-to/lib/index.js').pipe(rename('es6-scroll-to.js')).pipe(gulp.dest('./build/js/'));
   done()
 };
 
 function html(done) {
-  gulp.src('./src/*.html').pipe(gulp.dest('./srv/'));
+  gulp.src('./src/*.html').pipe(gulp.dest('./build/'));
   done()
 };
 
@@ -35,14 +35,14 @@ function connectOpen() {
 
 function connection() {
   connect.server({
-    root: 'srv',
+    root: 'build',
     port: 1337,
     livereload: true
   });
 };
 
 function livereload(done) {
-  gulp.src('./srv/**/*').pipe(connect.reload());
+  gulp.src('./build/**/*').pipe(connect.reload());
   done()
 };
   
