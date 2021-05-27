@@ -3,9 +3,9 @@ import {animatedScrollTo} from './es6-scroll-to.js';
 // document.querySelector('.title').innerHTML = 'Great success!'
 // document.querySelector('.text').innerHTML = 'Javascript is working!'
 
-let header = document.querySelector('.main-conversion-headline');
-let button = document.querySelector('.content-button');
-let headline = document.querySelector(".content-headline");
+let header = document.querySelector('.main-conversion__headline');
+let button = document.querySelector('.main-conversion__content-button');
+let headline = document.querySelector('.main-conversion__content-headline');
 
 button.addEventListener('click', () => {
     console.log("Clicked!!");
