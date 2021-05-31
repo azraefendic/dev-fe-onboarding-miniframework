@@ -1,14 +1,128 @@
 body {
-  background-color: pink;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  height: 2000px;
+  margin: 0;
 }
 
-.content {
-  position: absolute;
-  top: 600px;
-  background-color: #fefefe;
-  padding: 50px;
-  margin: 20px;
-  box-shadow: inset 1px 1px 11px 0px black;
+
+.main-conversion, .main-conversion-red, .secondary-conversion {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.main-conversion__content, .main-conversion-red__content {
+  display: flex;
+  width: 100%;
+}
+
+.main-conversion__content-wrapper, .main-conversion-red__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+  width: 50%;
+  background-color: #ecede8;
+  padding: 0 140px 0 280px;
+}
+
+.main-conversion__content-img, .main-conversion-red__content-img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.main-conversion__headline, .main-conversion-red__headline, .secondary-conversion__headline {
+  border-left: 3px red solid;
+  padding-left: 8px;
+  margin-bottom: 25px;
+  position: relative;
+  left: 280px;
+  font-size: 1.6em;
+  font-weight: bold;
+  width: fit-content;
+}
+
+p {
+  font-size: 11px;
+  margin-top: 0;
+}
+
+
+.main-conversion__content-button, .main-conversion-red__content-button {
+  background-color: black;
+  border: none;
+  color: #ecede8;
+  padding: 2%;
+  margin-top: 6%;
+  font-size: .6em;
+  cursor: pointer;
+}
+
+.main-conversion-red__content-headline {
+  color: salmon;
+}
+
+.secondary-conversion {
+  width: 100%;
+}
+
+.secondary-conversion__content {
+  display: flex;
+  overflow: hidden;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #ecede8;
+  padding: 60px 200px 60px 280px;
+}
+
+.secondary-conversion__content-img {
+  max-width: 400px;
+}
+
+.secondary-conversion__content-button {
+  background-color: salmon;
+  color: white;
+  border: none;
+  padding: 2%;
+  margin-top: 6%;
+  font-size: .6em;
+  cursor: pointer;
+}
+
+.secondary-conversion__content-wrapper {
+  padding-left: 20px;
+}
+
+.secondary-conversion__content-headline {
+  font-size: 20px;
+}
+
+
+@media (max-width: 1024px) {
+
+  .main-conversion__headline {
+    left: 20px;
+  }
+
+  .main-conversion__content {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .main-conversion__content-img {
+    width: 100%;
+    height: 50%;
+  }
+
+  .main-conversion__content-wrapper {
+    width: 100%;
+    padding-left: 20px;
+    left: 20px;
+    height: 400px;
+  }
+
+  .main-conversion__content-button {
+    margin-top: 2%;
+    padding: 10px;
+  }
 }
