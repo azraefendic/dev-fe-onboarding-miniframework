@@ -10,7 +10,7 @@ let headline = document.querySelector('.main-conversion__content-headline');
 button.addEventListener('click', () => {
     console.log("Clicked!!");
     header.innerHTML = 'CtA - Main conversion - Red Headline';
-    headline.style.color = "red";
+    headline.style.color = "salmon";
 } )
 
 
